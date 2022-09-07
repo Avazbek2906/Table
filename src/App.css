@@ -1,0 +1,29 @@
+.table {
+  width: 100%;
+  min-height: 100vh;
+  background: #d7e4f3;
+  padding: 24px;
+  box-sizing: border-box;
+}
+.table-header {
+  background-color: white;
+
+  padding: 16px 24px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 2px;
+}
+.table-content {
+  background: #ffffff;
+  padding: 20px 32px;
+}
+.table-filter {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+}
+.filter-button {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
