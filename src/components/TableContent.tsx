@@ -2,6 +2,7 @@ import { Space, Table, Tag } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import { GetFunc } from "../server/config";
 
 interface DataType {
   key: string;
@@ -92,7 +93,9 @@ function TableContent() {
       let value = searchParams.get(key);
       url = url + `&${key}=${value}`;
     }
-    console.log(url);
+    GetFunc(url).then((res) => {
+      console.log(res.data);
+    });
   };
   useEffect(() => {
     getUrlFunctions();
