@@ -18,6 +18,7 @@ const columns: ColumnsType<DataType> = [
     dataIndex: "name",
     key: "name",
     render: (text) => <a>{text}</a>,
+    fixed: "left",
   },
   {
     title: "Age",
@@ -103,7 +104,7 @@ function TableContent() {
   return (
     <div>
       <h2>Ma'lumotlar</h2>
-      <Table columns={columns} dataSource={data} />
+      <Table columns={columns} dataSource={data} scroll={{ x: 800 }} />
     </div>
   );
 }
